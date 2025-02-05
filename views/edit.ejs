@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Profile - Instagram</title>
+  <link rel="stylesheet" href="/stylesheets/edit.css">
+</head>
+<body>
+  <div class="container">
+    <div class="profile-box">
+      <div class="profile-header">
+        <h2>Edit Profile</h2>
+      </div>
+      <form method="post" action="/edit"  class="profile-form">
+      
+       
+        
+        
+        <input type="text" placeholder="<%=user.fullname%>" name="fullname" class="profile-input" required>
+        <input type="text" placeholder="<%=user.username%>" name="username"class="profile-input" required>
+      
+        <textarea placeholder="Bio" name="bio" class="bio-input"></textarea>
+        
+        
+        <div class="profile-actions">
+          <button type="submit">save</button>
+          <button type="button">Cancel</button>
+        </div>
+      </form>
+    </div>
+    
+   
+  </div>
+  <div class="footnav">
+                    
+                        
+                    
+    <a href="/home"><img class="svg" src="/svg/homepage.svg" alt=""></a> 
+    
+
+
+     <img class="svg"  src="/svg/search.svg" alt="">
+
+
+ 
+     <img class="svg"  src="/svg/createpost.svg" alt="">
+ 
+
+    <a href="/profile" target="_blank" rel="noopener noreferrer"> <img class="svg"  src="/svg/profile.svg" alt=""></a>
+ 
+</div>
+</body>
+</html>

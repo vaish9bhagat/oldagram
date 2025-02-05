@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram Sign Up</title>
+    <link rel="stylesheet" href="/stylesheets/register.css" />
+  </head>
+  <body>
+    <div class="register-container">
+      <div class="register-box">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg"
+          alt="Instagram logo"
+          class="logo"
+        />
+        <form
+          class="register-form"
+          action="/register"
+          method="post"
+          autocomplete="on"
+        >
+          <input
+            type="text"
+            name="fullname"
+            placeholder="Full Name"
+            autocomplete="given-name"
+          />
+          <input
+            type="text"
+            name="username"
+            placeholder="User Name"
+            autocomplete="username"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            autocomplete="email"
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            autocomplete="current-password"
+            id=""
+          />
+          <button class="fb-register-btn" type="submit">sign in</button>
+        </form>
+
+        <div class="terms">
+          <p>
+            By signing up, you agree to our <a href="#">Terms</a> &
+            <a href="#">Privacy Policy</a>.
+          </p>
+        </div>
+        <div class="login-link">
+          <p>Already have an account? <a href="/login">Log in</a></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

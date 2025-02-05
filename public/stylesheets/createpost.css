@@ -1,0 +1,93 @@
+
+*{
+    margin: 0; 
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(223, 219, 219);
+    
+}
+.main{
+
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+   
+.container {
+    margin: 900px;
+    height: 400px;
+    width: 448px;
+    margin: 50px auto;
+    background-color: #fff;
+    
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.footnav{
+    width: 100%;
+    position:sticky;
+    bottom: 0;
+    background-color: white;
+    align-self: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.11);
+    
+    
+  padding-top: 10px;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.input{
+    display: flex;
+    justify-content: center;
+    
+}
+label {
+    font-weight: bold;
+}
+input[type="file"],
+input[type="text"],
+input[type="number"] {
+    width: 400px;
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button:hover {
+    background-color: #007bb5;
+}

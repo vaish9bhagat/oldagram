@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/locomotive.css">
+    <link rel="stylesheet" href="/stylesheets/home.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="navbar">
+        <img
+          src="https://assets.codepen.io/1468329/logo.png"
+          alt="Oldagram logo"
+          class="logo"
+        />
+
+        <img
+          src="/images/uploads/<%=user.profileImage%>"
+          alt="Per"
+          class="avatar"
+        />
+      </header>
+
+      <div id="posts-container">
+        <article class="post">
+          <% post.forEach(function(post){%>
+          <header class="profile">
+            <img
+              src="/images/uploads/<%=post.user.profileImage%>"
+              alt=""
+              class="avatar"
+            />
+
+            <div class="profile-text">
+              <h2><%=post.user.fullname%></h2>
+              <h3><%=post.location%></h3>
+            </div>
+          </header>
+
+          <div class="post-content">
+            <img src="/images/uploads/<%=post.image%>" alt="Gustave Courbet" />
+          </div>
+
+          <footer>
+            <div class="first">
+              <div class="counts">
+                <i class="ri-heart-line"></i>12,502 likes
+              </div>
+              <div class="comment">
+                <i class="ri-message-2-line"></i> 23 comments
+              </div>
+            </div>
+            <div class="post-text"><%=post.posttext%></div>
+          </footer>
+          <% })%>
+        </article>
+
+        <div class="footnav">
+          <a href=""><img class="svg" src="/svg/homepage.svg" alt="" /></a>
+
+          <img class="svg" src="/svg/search.svg" alt="" />
+
+          <a href="/createpost" target="_blank" rel="noopener noreferrer">
+            <img class="svg" src="/svg/createpost.svg" alt=""
+          /></a>
+
+          <a href="/profile" target="_blank" rel="noopener noreferrer">
+            <img class="svg" src="/svg/profile.svg" alt=""
+          /></a>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script>
+      
+
+      const scroll = new LocomotiveScroll({
+        el: document.querySelector("body"),
+        smooth: true,
+      });
+      const likeButtons = document.querySelectorAll(".like-btn");
+
+      likeButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const countsElement = button
+            .closest(".post")
+            .querySelector(".counts");
+          let countsText = countsElement.textContent.trim();
+          let currentCount = parseInt(countsText.replace(/,/g, ""));
+
+          // Get the clicked attribute and convert it to a boolean
+          let clicked = button.getAttribute("data-clicked") === "true";
+
+          // Update the counts based on button click
+          if (!clicked) {
+            currentCount += 1;
+          } else {
+            currentCount -= 1;
+          }
+
+          // Toggle the clicked attribute
+          button.setAttribute("data-clicked", !clicked);
+
+          // Create the updated counts string
+          const updatedCountsString =
+            currentCount.toLocaleString() +
+            " " +
+            (currentCount === 1 ? "like" : "likes");
+
+          // Update the counts element with the new string
+          countsElement.textContent = updatedCountsString;
+        });
+      });
+    </script>
+  </body>
+</html>

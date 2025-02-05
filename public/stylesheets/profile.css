@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(227, 224, 224);
+  
+}
+.navbar {
+  width: 100%;
+  height: 70px;
+background-color: white;
+  display: flex;
+  
+  align-items: center;
+}
+.ologo{
+  width: 100px;
+}
+
+.contain2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:20px;
+}
+.container {
+  max-width: 100%;
+  background-color: white;
+  border-top: 1px solid rgba(0, 0, 0, 0.297);
+  
+}
+.container1 {
+  display: flex;
+  justify-content: center;
+}
+
+#sec {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.footnav {
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+  background-color: white;
+  border-top: 1px solid rgba(0, 0, 0, 0.323);
+
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+#btn {
+  text-decoration: none;
+  background-color: #1976d2;
+  color: white;
+  font-weight: 700;
+}
+.rounded-circle {
+  width: 30px;
+}
+.center-search {
+  margin-left: 25%;
+}
+.border_silver {
+  border-color: #dbdbdb !important;
+}
+.item {
+  width: 100px;
+}
+
+.container-article {
+  position: relative;
+  border-radius: 1px solid black;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #303030;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+  opacity: 0.9;
+}
+#image {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.container-article:hover .overlay {
+  height: 100%;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+a:link {
+  color: #000;
+  text-decoration: none;
+}
+a:visited {
+  color: #000;
+  text-decoration: none;
+}
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+.footer-font {
+  font-size: small;
+}
+.modal-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: 0 !important;
+  padding-right: 1rem !important;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(0 0 0);
+}
+.comment-widgets .comment-row:hover {
+  background: rgba(0, 0, 0, 0.02);
+  cursor: pointer;
+}
+
+.comment-widgets .comment-row {
+  border-bottom: 1px solid rgba(120, 130, 140, 0.13);
+  padding: 15px;
+}
+nav {
+  height: 50px;
+}
+
+.comment-text:hover {
+  visibility: hidden;
+}
+
+.comment-text:hover {
+  visibility: visible;
+}
+
+.label {
+  padding: 3px 10px;
+  line-height: 13px;
+  color: #ffffff;
+  font-weight: 400;
+  border-radius: 4px;
+  font-size: 75%;
+}
+#img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  background-size: cover;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin-top: 40px;
+}
+
+.round img {
+  border-radius: 100%;
+}
+.logo {
+  width: 90px;
+}
+
+.label-info {
+  background-color: #1976d2;
+}
+
+.label-success {
+  background-color: green;
+}
+
+.label-danger {
+  background-color: #ef5350;
+}
+
+.action-icons a {
+  padding-left: 7px;
+  vertical-align: middle;
+  color: #99abb4;
+}
+
+.action-icons a:hover {
+  color: #1976d2;
+}
+
+.mt-100 {
+  margin-top: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .center-search {
+    margin-left: 0;
+  }
+  .item {
+    width: 40px;
+  }
+  .navbar-nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row !important;
+    flex-direction: row !important;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
+}
+.profile-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  background-size: cover;
+}
+.editbtn {
+  border: none;
+  background-color: red;
+  padding: 5px;
+  color: white;
+  border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin: 5px;
+}
